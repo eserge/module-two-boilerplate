@@ -44,20 +44,25 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel', 'eslint']
+        loaders: ['babel', 'eslint'],
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         loaders: ['style', 'css']
       },
       {
-        test: /\.(gif|png|je?pg)$/,
+        test: /\.(svg|gif|png|je?pg)$/,
         loader: 'file',
         query: {
           name: '[path][name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        loader: 'file'
       }
     ]
   },
   plugins: plugins
-}
+};

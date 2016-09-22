@@ -9,9 +9,9 @@ function toggleSpinner() {
   spinner.classList.toggle('show');
 }
 
-function renderUser({ nickname, accountId }) {
+function renderUser({ nickname, account_id: accountId }) {
   return `
-    <div class="search-results_item js-user" data-id="${accountId}">${nickname}</div>
+    <li class="search-results_item js-user list-group-item" data-id="${accountId}">${nickname}</li>
   `;
 }
 
@@ -28,12 +28,12 @@ function renderSearchResult(accounts) {
   }
 }
 
-function renderUserProfile({ nickname, globalRating, statistics }) {
+function renderUserProfile({ nickname, global_rating: globalRating, statistics }) {
   const { wins, battles } = statistics.all;
   const winsPercents = ((wins / battles) * 100).toFixed(2);
   const profile = `
-    <div>
-    <h1>${nickname}</h1>
+    <div class="jumbotron">
+    <h1 class="glyphicon glyphicon-user">${nickname}</h1>
     <p>Rating: ${globalRating}</p>
     <p>Battles: ${battles}</p>
     <p>Wins Percent: ${winsPercents}</p>

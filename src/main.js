@@ -1,6 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import { handleSearchClick } from './handlers';
+// require('./main.css');
 
-require('./main.css');
 
 document.addEventListener('DOMContentLoaded', () => {
   // add search button click handler here
