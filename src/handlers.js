@@ -1,6 +1,6 @@
 import {
   loadUsers,
-  loadProfile
+  loadProfile,
 } from './loaders';
 
 import {
@@ -10,7 +10,7 @@ import {
 } from './views';
 
 
-function handleSearchClick(e) {
+function handleSearchClick() {
   // const query = document.q
   toggleSpinner();
   const usernameInput = document.querySelector('#username');
@@ -23,7 +23,7 @@ function handleSearchClick(e) {
   .then(renderSearchResult)
   .catch((message) => {
     toggleSpinner();
-    alert(message);
+    alert(message); /* eslint no-alert: "off" */
   });
 }
 
@@ -39,4 +39,4 @@ function handleUserClick(e) {
 export {
   handleSearchClick,
   handleUserClick
-}
+};
