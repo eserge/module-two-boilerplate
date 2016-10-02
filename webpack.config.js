@@ -1,13 +1,13 @@
-var webpack = require('webpack')
-var path = require('path')
+var webpack = require('webpack');
+var path = require('path');
 
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var CleanWebpackPlugin = require('clean-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var appPath = path.join(__dirname, 'src')
+var appPath = path.join(__dirname, 'src');
 
-var env = process.env.NODE_ENV || 'dev'
-var debug = env !== 'production'
+var env = process.env.NODE_ENV || 'dev';
+var debug = env !== 'production';
 var minify = !debug;
 
 var plugins = [
@@ -23,7 +23,7 @@ var plugins = [
 ];
 
 if (minify) {
-  plugins.push(new webpack.optimize.UglifyJsPlugin())
+  plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
 module.exports = {
