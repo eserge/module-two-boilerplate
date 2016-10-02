@@ -8,6 +8,7 @@ It will be passed automatically via proxy server
 const API_PROXY_URL = 'http://188.166.73.133/wg-api';
 const GAME = 'wot';
 
+
 function makeRequest(url) {
   return fetch(url)
   .then(response => response.json())
