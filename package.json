@@ -40,6 +40,7 @@
     "jsdom": "^9.5.0",
     "jsdom-global": "^2.1.0",
     "mocha": "^3.1.0",
+    "mockery": "^1.7.0",
     "nyc": "^8.3.0",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",

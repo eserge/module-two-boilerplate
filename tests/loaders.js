@@ -9,7 +9,7 @@ import {
 import sinon from 'sinon';
 
 
-describe.only('loadUsers', function() {
+describe('loadUsers', function() {
   const fakeData = {foo: 'bar'},
         fakeUser = 'fakeUserName';
 
@@ -39,7 +39,7 @@ describe.only('loadUsers', function() {
   });
 });
 
-describe.only('loadProfile', function() {
+describe('loadProfile', function() {
   const accountId = 42,
         errorMessage = 'this message',
         fakeData = {stuff: 42};
